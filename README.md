@@ -1,7 +1,7 @@
 # Pseudo Motion Sensor
 
-## Description
 
+## Description
 貧乏なので人感センサーを買えません。そこで考えたのが Wi-Fi の RSSI です。下図のように手で覆っただけで変化があります。下図は 1 sec 間隔のものですが 0.1 sec 間隔にするともっと精度が上がります。ラズパイと Wi-Fi AP の間を歩くだけの一瞬でも RSSI の減衰を取得できるので結構使えると個人的には思います。
 
 ![reduce RSSI](imgs/iwconfig_ss_1.png)
@@ -12,7 +12,20 @@
 
 
 ## Sample
-
 ある領域に侵入したら LED が光るようにしました。
 
 ![sample](imgs/IMG_0272.gif)
+
+```
+nohup ~/bin/pseudo-motion-sensor/pseudo-motion-sensor-sample.sh > /dev/null 2>&1 &
+```
+
+
+## License
+Copyright (c) 2016 tkumata
+
+This software is release under the MIT License, please see [MIT](http://opensource.org/licenses/mit-license.php)
+
+
+## Author
+tkumata
